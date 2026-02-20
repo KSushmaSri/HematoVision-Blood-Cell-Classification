@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HematoVision - Blood Cell Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #b30000;
+            color: white;
+            padding: 25px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 30px 60px;
+        }
+
+        h2 {
+            color: #b30000;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .upload-box {
+            margin-top: 30px;
+            border: 2px solid #b30000;
+            padding: 30px;
+            display: inline-block;
+            border-radius: 12px;
+        }
+
+        input[type="file"] {
+            margin: 15px 0;
+        }
+
+        button {
+            background-color: #b30000;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #800000;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #f2f2f2;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    HemaToVision
+</div>
+
+<div class="section">
+    <h2>Understanding Blood Cells</h2>
+    <p>
+        Blood cells play a vital role in maintaining human health. 
+        Red Blood Cells (RBCs) carry oxygen throughout the body, 
+        White Blood Cells (WBCs) help fight infections, and Platelets 
+        assist in blood clotting. Accurate identification of blood cell types 
+        is important for diagnosing various medical conditions.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Blood Cell Classification Using Deep Learning</h2>
+    <p>
+        Upload a microscopic blood cell image below to analyze and determine 
+        its type using our AI-powered classification system. 
+        The model will predict the blood cell category along with confidence score.
+    </p>
+
+    <div class="upload-box">
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Analyze Image</button>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    © 2026 HematoVision | AI-Based Blood Cell Classification System
+</div>
+
+</body>
+</html>
